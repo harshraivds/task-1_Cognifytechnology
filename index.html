@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server-side Rendering and Form Submissions</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Submissions</h1>
+        <form id="myForm" action="/submit" method="POST" onsubmit="clearForm()">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+            <small>Format: 10 digits</small>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" required>
+
+            <label for="dob">Add Some Text:</label>
+            <input type="text" id="text-area" name="text-area">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function clearForm() {
+            document.getElementById("myForm").reset();
+        }
+    </script>
+</body>
+</html>
